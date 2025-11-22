@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dra. Telma Moraes | Ortodontista no Tirol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ortodontia e Clínica Geral em Natal/RN. Dra. Telma Moraes atende na Clínica OdontoFace, no bairro Tirol. Agende sua avaliação.">
+  <style>
+    :root {
+      --azul: #005a8d;
+      --azul-claro: #e4f4ff;
+      --verde: #5bbf3b;
+      --cinza: #f5f5f5;
+      --texto: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      color: var(--texto);
+      background: #fff;
+      line-height: 1.5;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #ffffffee;
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #ddd;
+    }
+
+    .topbar {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.5rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-box img {
+      height: 52px;
+      width: auto;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9rem;
+    }
+
+    .logo-text strong {
+      font-size: 1rem;
+      color: var(--azul);
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--texto);
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: var(--azul);
+    }
+
+    .cta-top {
+      background: var(--verde);
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.8rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--azul-claro), #ffffff);
+      padding: 3.5rem 1.25rem 3rem;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      color: var(--azul);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p.sub {
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .tag {
+      background: #fff;
+      border-radius: 999px;
+      padding: 0.25rem 0.8rem;
+      border: 1px solid #d0e2ff;
+      font-size: 0.8rem;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn-primary, .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background: var(--azul);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #004068;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--azul);
+      border: 1px solid var(--azul);
+    }
+
+    .btn-outline:hover {
+      background: #e3f1ff;
+    }
+
+    .hero .small-info {
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    .hero-photo {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.16);
+      background: #000;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      display: block;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 3rem 1.25rem;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      color: var(--azul);
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--azul);
+    }
+
+    .card ul {
+      margin-left: 1.1rem;
+      margin-top: 0.3rem;
+      font-size: 0.92rem;
+    }
+
+    .card ul li {
+      margin-bottom: 0.25rem;
+    }
+
+    .conv-planos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pill {
+      background: var(--cinza);
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.85rem;
+    }
+
+    /* GALERIA */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+      height: 220px;
+    }
+
+    /* CONTATO */
+    .contact-info {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .contact-box {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      font-size: 0.95rem;
+    }
+
+    .contact-box p {
+      margin-bottom: 0.5rem;
+    }
+
+    .map {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      min-height: 260px;
+    }
+
+    footer {
+      background: #0b1924;
+      color: #dde7f0;
+      padding: 1.5rem 1.25rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero-inner,
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 2.5rem;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="logo-box">
+        <!-- Substitua o src abaixo pelo caminho da sua logo -->
+        <img src="IMG_7456.JPG" alt="Logo Dra. Telma Moraes" />
+        <div class="logo-text">
+          <strong>Dra. Telma Moraes</strong>
+          <span>Ortodontista · Clínica OdontoFace</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Tratamentos</a>
+        <a href="#estrutura">Estrutura</a>
+        <a href="#contato">Contato</a>
+        <a class="cta-top" href="https://wa.me/5584991966777?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+com+a+Dra.+Telma+Moraes." target="_blank" rel="noopener">
+          Agendar pelo WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <h1>Ortodontista no Tirol · Natal/RN</h1>
+          <p class="sub">
+            Alinhamento dental, conforto e cuidado humano com a
+            <strong>Dra. Telma Moraes</strong> na Clínica OdontoFace.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Ortodontia</span>
+            <span class="tag">Clínica Geral</span>
+            <span class="tag">Convênios: Amil, Humanas, Geap, Petrobras</span>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn-primary" href="https://wa.me/5584991966777?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+ortod%C3%B4ntica." target="_blank" rel="noopener">
+              Agendar avaliação pelo WhatsApp
+            </a>
+            <a class="btn-outline" href="#estrutura">Ver estrutura da clínica</a>
+          </div>
+
+          <p class="small-info">
+            📍 Praça Augusto Leite, 656 – Tirol, Natal/RN · Clínica OdontoFace<br />
+            📞 (84) 99196-6777
+          </p>
+        </div>
+
+        <div class="hero-photo">
+          <!-- Substitua pelo melhor ângulo da fachada -->
+          <img src="FACHADA.jpeg" alt="Fachada da Clínica OdontoFace em Natal/RN" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+      <div class="section-inner">
+        <h2 class="section-title">Sobre a Dra. Telma Moraes</h2>
+        <p class="section-subtitle">
+          Ortodontista com atuação na Clínica OdontoFace, unindo tecnologia, estética e acolhimento
+          para cuidar do seu sorriso em todas as fases da vida.
+        </p>
+
+        <div class="grid-2">
+          <div>
+            <p>
+              Na OdontoFace, localizada no coração do bairro Tirol, você encontra um ambiente moderno,
+              confortável e preparado para oferecer uma experiência tranquila em cada consulta.
+            </p>
+            <br />
+            <p>
+              A <strong>Dra. Telma Moraes</strong> atua com foco em <strong>Ortodontia</strong> e
+              <strong>Clínica Geral</strong>, realizando desde avaliações ortodônticas até tratamentos
+              de manutenção da saúde bucal de toda a família.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Diferenciais</h3>
+            <ul>
+              <li>Atendimento humanizado e pontual</li>
+              <li>Ambiente amplo, climatizado e confortável</li>
+              <li>Planejamento ortodôntico individualizado</li>
+              <li>Localização privilegiada no Tirol</li>
+              <li>Atendimento a convênios selecionados</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" style="background: var(--cinza);">
+      <div class="section-inner">
+        <h2 class="section-title">Tratamentos</h2>
+        <p class="section-subtitle">
+          Ortodontia e Clínica Geral para cuidar do seu sorriso com segurança e qualidade.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Ortodontia</h3>
+            <ul>
+              <li>Avaliação ortodôntica completa</li>
+              <li>Aparelhos fixos metálicos e estéticos</li>
+              <li>Alinhamento para jovens e adultos</li>
+              <li>Manutenção ortodôntica periódica</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Clínica Geral</h3>
+            <ul>
+              <li>Limpeza e profilaxia</li>
+              <li>Restaurações</li>
+              <li>Acompanhamento da saúde bucal</li>
+              <li>Orientação preventiva para toda a família</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Convênios atendidos</h3>
+            <div class="conv-planos">
+              <span class="pill">Amil</span>
+              <span class="pill">Humanas</span>
+              <span class="pill">Geap</span>
+              <span class="pill">Petrobras</span>
+            </div>
+            <br />
+            <p style="font-size:0.9rem;">
+              Consulte nossa equipe para confirmar cobertura e carência do seu plano.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Agendamento facilitado</h3>
+            <p>
+              Entre em contato pelo WhatsApp para tirar dúvidas, verificar horários disponíveis e
+              agendar sua avaliação com a Dra. Telma.
+            </p>
+            <br />
+            <a class="btn-primary" href="https://wa.me/5584991966777?text=Ol%C3%A1%2C+gostaria+de+informações+sobre+tratamento+ortod%C3%B4ntico." target="_blank" rel="noopener">
+              Falar com a clínica
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTRUTURA -->
+    <section id="estrutura">
+      <div class="section-inner">
+        <h2 class="section-title">Estrutura da OdontoFace</h2>
+        <p class="section-subtitle">
+          Um espaço amplo, moderno e confortável para receber você e sua família.
+        </p>
+
+        <div class="gallery">
+          <!-- Substitua os src abaixo pelas suas fotos reais -->
+          <img src="ESPERA.jpeg" alt="Sala de espera da Clínica OdontoFace" />
+          <img src="RECEPCAO.jpeg" alt="Ambiente interno da Clínica OdontoFace" />
+          <img src="CONSULTORIO.jpeg" alt="Recepção da Clínica OdontoFace" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" style="background: var(--azul-claro);">
+      <div class="section-inner">
+        <h2 class="section-title">Contato e Localização</h2>
+
+        <div class="contact-info">
+          <div class="contact-box">
+            <p><strong>Dra. Telma Moraes · Ortodontista</strong></p>
+            <p>Clínica OdontoFace</p>
+            <p>📍 Praça Augusto Leite, 656 – Tirol, Natal/RN</p>
+            <p>📞 (84) 99196-6777</p>
+            <p style="margin-top:0.5rem;">
+              Convênios: Amil, Humanas, Geap, Petrobras.
+            </p>
+            <br />
+            <a class="btn-primary" href="https://wa.me/5584991966777?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener">
+              Agendar pelo WhatsApp
+            </a>
+          </div>
+
+          <div class="map">
+            <!-- Você pode trocar o src por um iframe real do Google Maps da clínica -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d-35.206!3d-5.812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPra%C3%A7a%20Augusto%20Leite!5e0!3m2!1spt-BR!2sbr!4v0000000000"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© OdontoFace · Dra. Telma Moraes – Ortodontista</span>
+      <span>Praça Augusto Leite, 656 – Tirol, Natal/RN · (84) 99196-6777</span>
+    </div>
+  </footer>
+</body>
+</html>
