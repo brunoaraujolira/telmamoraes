@@ -344,7 +344,7 @@ footer {
   }
 
   .hero {
-    height: 60vh;           /* deixa a altura se ajustar ao conteúdo */
+    height: 75vh;           /* deixa a altura se ajustar ao conteúdo */
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
