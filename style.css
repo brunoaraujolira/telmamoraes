@@ -432,4 +432,63 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
+
+ 
+  .hero {
+    background-image: url("logo2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* altura proporcional ao smartphone */
+    height: 40vh;
+
+    /* remove padding extra e evita herdar altura gigante do desktop */
+    padding: 0;
+
+    /* remove grids pesados */
+    display: flex;
+    align-items: flex-end;
+  }
+
+  /* conteúdo do hero centralizado abaixo da imagem */
+  .hero-inner {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: .8rem;
+    background: rgba(255,255,255, .92); /* opcional para legibilidade */
+    backdrop-filter: blur(4px);
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .hero p.sub {
+    font-size: .9rem;
+  }
+
+  .hero .tags {
+    justify-content: center;
+  }
+
+  .hero-photo {
+    display: none; /* remove foto lateral */
+  }
+
+  .btn-row {
+    flex-direction: column;
+    gap: .6rem;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+  }
 }
+
+
